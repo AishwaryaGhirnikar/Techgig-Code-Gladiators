@@ -1,0 +1,25 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+
+def main():
+
+ # Write code here 
+    V=input()
+    N=int(input())
+    x=[]
+    for i in range(N):
+        x.append(input())
+    for i in x:
+        print("POSITIVE" if check(i,V) else "NEGATIVE")
+
+def check(s1,s2):
+    len1=len(s1)
+    len2=len(s2)
+    i=j=0
+    while j<len1 and i<len2:
+        if s1[j] == s2[i]:
+            j+=1
+        i+=1
+    return j==len1
+
+main()
